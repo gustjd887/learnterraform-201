@@ -1,10 +1,16 @@
 terraform {
   cloud {
     hostname = "phs-tfe.kuberix.co.kr"
-    organization = "phs-tfe"
+    organization = "kuberix"
 
     workspaces {
-      name = "phs"
+      name = "learnterraform-201"
+    }
+  }
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.16"
     }
   }
 }
